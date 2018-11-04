@@ -1,0 +1,500 @@
+/*@font-face {
+  font-family: 'honey-script';
+  src: url('../fonts/honey-script.light.ttf');
+}*/
+@-ms-viewport{
+  width: device-width;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f0f0f0 !important;
+
+}
+
+section{
+    min-height: 580px;
+    margin-top: 40px;
+}
+
+
+/*.innserSpacing {
+    padding-right: 0px !important;
+    padding-left: 30px !important;
+}*/
+
+a, .fa{
+    color:#525252 !important;
+}
+
+.container_new {
+    position: relative;
+    margin-left: 4%;
+}
+section#header div {
+    padding: 0px;
+}
+
+.container_new #header{
+    z-index: 3;
+    top: 0px;
+    max-height: 80px;
+}
+
+.container_new .bg-white{
+    background-color: white;
+}
+
+.container_new .row {
+    margin: 0;
+}
+
+#header .logo {
+    height: 80px;
+    text-align: center;
+}
+
+#header .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.logo img {
+    max-height: 33%;
+}
+
+div#fixedMenu {
+    position: fixed;
+    top: 25%;
+    z-index: 3;
+    width: 25%;}
+
+div#fixedMenu ul {
+    list-style-type: none;
+    text-align: right;
+    padding-left: 0;
+}
+
+div#fixedMenu li {
+    margin: 45px 0px;
+    position: relative;
+    height: 8px;
+    }
+
+div#fixedMenu li.active{
+    background: #ffcb42bd;
+    transition: all 0.2s ease 0.2s;
+    width: 100%
+}
+
+div#fixedMenu li a{
+    position: relative;
+    top: -10px;
+    left: -6px;
+}
+
+/*.sticky .logo img {
+    max-height: 90px;
+    transition: max-height 0.5s ease;
+}
+
+.sticky .menu_bar li {
+    padding: 25px 25px;
+    transition: padding 0.5s ease;
+}*/
+
+.menu_bar ul, .mob_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    margin-right: 5%;
+    
+}
+
+.menu_bar li, .mob_menu li{
+    padding: 0px 15px;
+    font-size: 16px;
+    height: 80px;
+    display: inline-block;
+}
+
+
+.menu_bar li:hover {
+    color: #525252;
+}
+
+.menu_bar ul li a {
+    text-decoration: none;
+}
+
+.menu_bar ul li i{
+    position: relative;
+}
+
+span.notification {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 5px;
+    position: absolute;
+    top: -7px;
+    right: -9px;
+    background: #ffc20fd9;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+}
+
+section .section_heading {
+    text-align: center;
+}
+
+section .section_heading h2 {
+    margin-bottom: 35px;
+    font-size: 50px;
+}
+
+section .section_heading h2 {
+    margin-bottom: 35px;
+    font-size: 50px;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    font-size: 100px;
+    margin-left: 0px;
+    /*padding: 40px 0px;*/
+    color: white;
+}
+
+.contentBox img {
+    object-fit: cover;
+    width: 100%;
+    min-height: 311px;
+}
+hr{
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    border-top: 1px solid #c1c1c1 !important; 
+    width: 80%;
+    margin-left: 0;
+}
+.contentDesc .contentPrize {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.contentDesc .contentPrize span {
+    padding-right: 15px;
+}
+
+.contentDesc .contentPrize span.strikeThru {
+    text-decoration: line-through;
+    color: #b7b7b7;
+}
+
+.contentDetail ul li {
+    font-size: 10px;
+}
+
+#details .textBold{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.contentFacility ul {
+    padding: 0;
+    list-style: none;
+    float: left;
+    width: 100%;
+}
+
+.contentFacility ul li {
+    display: inline-block;
+        width: 45%;
+
+}
+.contentFacility i {
+    background: #cccccc;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.contentColor span.colorHeading {
+    display: block;
+    font-size: 10px;
+}
+
+.contentFacility span {
+    display: inline-block;
+    width: 65%;
+    margin-top: 0px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+section .section_content {
+    position: relative;
+}
+
+.contentColor input {
+  display: none;
+}
+
+.contentColor .button {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+.contentColor label{
+    position: relative;
+    }
+
+.contentColor .button span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 100%;
+  background: #eeeeee;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: ease .3s;
+}
+
+.checkmark {
+  display: none;
+}
+.checkmark:after {
+  content: "";
+    /* display: block; */
+    width: 7px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    margin: 10px;
+    left: 12px;
+    top: 7px;
+    z-index: 1;
+}
+
+.orange .button span {
+  background: #FF5722;
+}
+
+.lime .button span {
+  background: #8BC34A;
+}
+
+.blue .button span {
+  background: #2196F3;
+}
+
+input:checked ~ .checkmark {
+display: block !important;
+    }
+
+.contentCounter button.minus, button.plus {
+    border: none;
+    background: transparent;
+    padding: 0px 12px;
+    /*width: 30px;*/
+    font-size: 20px;
+}
+
+.contentCart div {
+    display: inline-block;
+    width: 260px;
+}
+
+.contentCounter .displayCounter{
+    font-size: 20px;
+    padding: 0px 11px;
+}
+
+.contentCart .addToCart .cart{
+    border: none;
+    background: transparent;
+    padding: 4px 12px;
+}
+
+
+.contentCart {
+    width: 65%;
+}
+.contentCounter{
+    background: #dedede;
+}
+
+.contentCart button.cart {
+    background: #fbd572cc;
+    /* height: 28px; */
+    margin-top: 0px;
+    /* margin: 0 auto; */
+    font-size: 10px;
+    font-weight: bold;
+    padding: 9px 39px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.padding0{
+    padding: 0px !important;
+}
+
+.paddingRight0{
+    padding-right: 0px !important;
+}
+
+section#details .bgWhite {
+    background: white;
+    min-width: 100%;
+    min-height: 100%;
+    /* z-index: 0; */
+    position: absolute;
+    left: 85px;
+    top: 0;
+}
+
+
+
+section#details .contentImage {
+    position: relative;
+    top: 30px;
+}
+
+div#header .mob_menu{
+    display: none;
+}
+
+#headerBox .menu ,#headerBox .menu_btns {
+    display: inline-block;
+}
+
+section#details .contentDesc {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-bottom: 40px; 
+}
+
+div#fixedMenu .socialShare {
+    text-align: right;
+}
+
+div#fixedMenu .socialShare i {
+    padding: 0px 5%;
+}
+
+section#description .section_content .contentHeading{
+    position: relative;
+    width: 220%;
+    z-index: 2;
+    background: #f0f0f0;
+}
+
+section#reviews .section_content .contentHeading {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 2;
+    width: 40%;
+    background: #f0f0f0;
+}
+
+section#description .section_content .contentHeading h3 {
+    margin-top: 0px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+section#reviews .section_content .contentHeading h3{
+    padding-left: 20px;
+    padding-bottom: 10px; 
+}
+
+section#custom .sectionBody .contentHeading {
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    padding-right: 15px;
+    position: absolute;    
+    top: 0;
+    left: 0;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+section#custom .sectionBody .customImgBig {
+    margin-left: 7%;
+}
+
+section#custom .sectionBody .customImgSmall {
+    position: absolute;
+    left: 5%;
+    bottom: 4%;
+}
+
+section#custom .sectionBody .customImgSmall img {
+    width: 60%;
+}
+
+
+@media(max-width:890px){
+    .menu_bar li {
+        padding: 0 9px;
+        transition: padding 0.2s ease 0.2s;
+    }
+    section .sectionHead {
+        visibility: hidden;
+        transition: width 0.2s ease 0.2s;
+        width: 15%;
+    }
+    section .sectionBody {
+        transition: width 0.2s ease 0.2s;
+        width: 85%;
+    }
+
+    div#fixedMenu {
+    width: 15%;
+    }
+}
+
+@media(max-width:767px){
+    #fixedMenu, section .sectionHead, #header .menu_bar .menu{
+        display: none;
+        transition: all 0.2s ease 0.2s;
+    }
+    div#header .mob_menu{
+        display: inline-block;
+    }
+    div#headerBox .container_new{
+        margin: 0px;
+    }
+    section#detail .sectionBody {
+    margin: 0 auto;
+    width: 95%;
+    background: white;
+    }
+    section#details .bgWhite{
+        display: none;
+    }
+    section#details .contentImage {
+    top: -30px;
+    }
+    .menu_bar li, .mob_menu li {
+    font-size: 14px;
+    }
+    .menu_bar li, .mob_menu li {
+     padding: 0px 6px;
+    }
+    div#header div {
+    padding: 0px 3px;
+    }
+
+}
