@@ -172,7 +172,7 @@ section .section_heading h2 {
 .contentBox img {
     object-fit: cover;
     width: 100%;
-    min-height: 311px;
+    min-height: 400px;
 }
 hr{
     margin-top: 15px !important;
@@ -356,10 +356,10 @@ display: block !important;
 section#details .bgWhite {
     background: white;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 450px;
     /* z-index: 0; */
     position: absolute;
-    left: 85px;
+    left: 15px;
     top: 0;
 }
 
@@ -370,7 +370,7 @@ section#details .contentImage {
     top: 30px;
 }
 
-div#header .mob_menu{
+div#header .mob_menu,#fixedMenuMob{
     display: none;
 }
 
@@ -402,7 +402,7 @@ section#description .section_content .contentHeading{
 section#reviews .section_content .contentHeading {
     position: absolute;
     top: 0;
-    left: 15px;
+    left: 0;
     z-index: 2;
     width: 40%;
     background: #f0f0f0;
@@ -444,7 +444,6 @@ section#custom .sectionBody .customImgSmall img {
     width: 60%;
 }
 
-
 @media(max-width:890px){
     .menu_bar li {
         padding: 0 9px;
@@ -463,6 +462,9 @@ section#custom .sectionBody .customImgSmall img {
     div#fixedMenu {
     width: 15%;
     }
+    section#custom .sectionBody .contentHeading {
+    padding-right: 5px;
+    }
 }
 
 @media(max-width:767px){
@@ -470,17 +472,26 @@ section#custom .sectionBody .customImgSmall img {
         display: none;
         transition: all 0.2s ease 0.2s;
     }
+    #fixedMenuMob{
+        display: block;
+        transition: all 0.2s ease 0.2s;
+    }
+
     div#header .mob_menu{
         display: inline-block;
     }
     div#headerBox .container_new{
         margin: 0px;
     }
-    section#detail .sectionBody {
+    section .sectionBody{
     margin: 0 auto;
     width: 95%;
-    background: white;
     }
+
+    section .whitebg{
+        background: white;
+    }
+
     section#details .bgWhite{
         display: none;
     }
@@ -496,5 +507,54 @@ section#custom .sectionBody .customImgSmall img {
     div#header div {
     padding: 0px 3px;
     }
+    section#description .section_content .contentHeading{
+        width: 100%;
+        background: white;
+        padding-top: 20px;
+    }
+    section .col-sm-9{
+    padding-right: 15px !important;
+    }
 
+    section#reviews .section_content .contentHeading{
+        bottom: 0;
+        top:unset !important;
+        background: #ffffff;
+        width: 100%;
+    }
+    section#reviews .whitebg{
+        width: 90%;
+    }
+
+    div#fixedMenuMob ul li {
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    padding: 15px 0px;
+    width: 24%;
+    }
+
+    div#fixedMenuMob ul li.active {
+        background: #ffcc2e;
+    }
+
+    div#fixedMenuMob ul li.active a{
+        color: white;
+    }
+
+    div#fixedMenuMob ul {
+        padding: 0px;
+        margin: 0 auto;
+        background: white;
+        border-top: 1px solid gainsboro;
+        border-bottom: 1px solid gainsboro;
+    }
+
+    div#fixedMenuMob.sticky {
+    position: fixed;
+    top: 0px;
+    z-index: 5;
+    width: 100%;
+    }
+    
 }

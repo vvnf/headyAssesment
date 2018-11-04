@@ -1,21 +1,12 @@
 window.onscroll = function() { scrollFunction() };
 
-var header = document.getElementById("header");
-var below_banner = document.getElementById('bedroom');
-//var banner_height = below_banner.offsetTop;
-//var arrow = document.getElementsByClassName("up_arrow");
+var fixedMenuMob = document.getElementById("fixedMenuMob");
 function scrollFunction() {
-    // if (window.pageYOffset >= 128) {
-    //   header.classList.add("sticky");
-    // } else {
-    //   header.classList.remove("sticky");
-    // }
-    // if (window.pageYOffset >= (banner_height - 100)) {
-    //   arrow[0].style.display = "unset";
-    // }
-    //  else {
-    //   arrow[0].style.display = "none";
-    // }
+    if (window.pageYOffset >= 80 && $(window).width() < 768) {
+      fixedMenuMob.classList.add("sticky");
+    } else {
+      fixedMenuMob.classList.remove("sticky");
+    }
 }
 
 // Smooth Scroll on menu click 
@@ -27,6 +18,17 @@ $(document).ready(function() {
         if ($target.offset().top != null) {
             $('html, body').animate({
                 'scrollTop': $target.offset().top - 150
+            }, 1000, 'swing');
+        }
+    });
+
+    $('#fixedMenuMob ul li a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        var target = this.hash;
+        var $target = $(target);
+        if ($target.offset().top != null) {
+            $('html, body').animate({
+                'scrollTop': $target.offset().top - 50
             }, 1000, 'swing');
         }
     });
@@ -79,6 +81,9 @@ $(document).scroll(function() {
             // console.log('height:'+_height);
             $('#fixedMenu ul li a').parent().removeClass('active');
             $('#fixedMenu a[href$="#' + i + '"]').parent().addClass('active');
+
+            $('#fixedMenuMob ul li a').parent().removeClass('active');
+            $('#fixedMenuMob a[href$="#' + i + '"]').parent().addClass('active');
         }
     }
 });
