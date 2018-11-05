@@ -1,0 +1,53 @@
+[
+     
+		{
+			"img_src":"images/relatedProd/prod1.jpg",
+			"heading":"Product 1",
+			"Oldprice":"$169",
+			"newprice":"$149"
+		},
+		{
+			"img_src":"images/relatedProd/prod2.jpg",
+			"heading":"Product 2",
+			"Oldprice":"$169",
+			"newprice":"$149"
+		},
+		{
+			"img_src":"images/relatedProd/prod3.jpg",
+			"heading":"Product 3",
+			"Oldprice":"$169",
+			"newprice":"$149"
+		},
+		{
+			"img_src":"images/relatedProd/prod4.jpg",
+			"heading":"Product 4",
+			"Oldprice":"$169",
+			"newprice":"$149"
+		},
+		{
+			"img_src":"images/relatedProd/prod5.jpg",
+			"heading":"Product 5",
+			"Oldprice":"$169",
+			"newprice":"$149"
+		},
+		{
+			"img_src":"images/relatedProd/prod6.jpg",
+			"heading":"Product 6",
+			"Oldprice":"$169",
+			"newprice":"$149"
+		},
+		{
+			"img_src":"images/relatedProd/prod7.jpg",
+			"heading":"Product 7",
+			"Oldprice":"$169",
+			"newprice":"$149"
+		},
+		{
+			"img_src":"images/relatedProd/prod8.jpg",
+			"heading":"Product 8",
+			"Oldprice":"$169",
+			"newprice":"$149"
+		}
+    
+
+]

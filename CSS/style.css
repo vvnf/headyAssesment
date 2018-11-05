@@ -190,7 +190,7 @@ hr{
     padding-right: 15px;
 }
 
-.contentDesc .contentPrize span.strikeThru {
+.contentDesc .contentPrize span.strikeThru, div#relatedProducts .eachProduct span.strikeThru {
     text-decoration: line-through;
     color: #b7b7b7;
 }
@@ -442,6 +442,27 @@ section#custom .sectionBody .customImgSmall {
 
 section#custom .sectionBody .customImgSmall img {
     width: 60%;
+}
+
+div#relatedScroller {
+    margin-bottom: 4`0px;
+}
+
+div#relatedProducts .eachProduct{
+    text-align: center;
+    margin: 0px 5px;
+    background: white;
+}
+
+div#relatedProducts .eachProduct img {
+    width: 195px;
+    object-fit: contain;
+    height: 150px;
+}
+
+div#relatedProducts .eachProduct .productName {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 @media(max-width:890px){

@@ -33,15 +33,6 @@ $(document).ready(function() {
         }
     });
 
-    // $('.up_arrow a[href^="#"]').on('click', function (e) {
-    //   e.preventDefault();
-    //   var target = this.hash;
-    //   var $target = $(target);
-
-    //   $('html, body').animate({
-    //     'scrollTop': $target.offset().top
-    //   }, 1000, 'swing');
-    // });
     localStorage.clickcount = 0;
     $('.contentCart .contentCounter .displayCounter').text(localStorage.clickcount);
     $('.contentCart .contentCounter button.plus').on('click',function () {
@@ -89,15 +80,68 @@ $(document).scroll(function() {
 });
 //END
 
+//Related Products Slider
+$(document).ready(function(){
+    //var productID = $('#relatedProducts .eachProduct');
+    // var products;
+    function getProdData(callback){
+        $.ajax({
+        method: 'GET',
+        url: 'JS/data.json'
+        })
+        .done(function(response) {
+            callback(response);
+        })
+        .fail(function() {
+          //showNotif("Network error, Please try again","error");
+          console.log('in Network error');
+        });
+    }
 
-// $(document).ready(function(){
-//       var i,j;
-// var length = 3;
-// // var row_length = 3;
-// for (i = 0; i < length; i++) {
-//   document.getElementById('inner_gallery').innerHTML += '<div class = "row"></div>';
-//     for(j = 0; j < length ; j++){
-//       document.getElementById("inner_gallery").getElementsByClassName("row")[i].innerHTML += '<div class = "col-sm-4"><a class = "gal-link" href = "images/portfolio/image'+i+j+'"><img src = "images/portfolio/image'+i+j+'"/><div class="middle"><i class="fa fa-search" aria-hidden="true"></i></div></a></div>';
-//     }
-// }
-// });
+    getProdData(function(response) {
+        var productData = response;
+        
+        for(i=0;i<response.length;i++){
+            let x = '<div class ="eachProduct">';
+            x+= '<img src = '+productData[i].img_src+' alt = "products"/>';
+            x+= '<div class = "productName">'+productData[i].heading+'</div>';
+            x+= '<div class = "productprize">';
+            x+= '<span class = "oldPrice strikeThru">'+productData[i].Oldprice+'</span> <span class = "newPrice">'+productData[i].newprice+'</span>';
+            x+= '</div>';
+            x+= '</div>';
+            $('#relatedProducts').append(x);
+        }
+        $('#relatedProducts').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                  }
+                }
+              ]
+        });
+    });
+  
+});
